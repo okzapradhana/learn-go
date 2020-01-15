@@ -41,4 +41,10 @@ func main() {
 	nama_operator_pointer := new(string)
 	fmt.Println("alamat memori", nama_operator_pointer)
 	fmt.Println("hasil dereference =", *nama_operator_pointer)
+
+	/*
+	jumlah := 10
+	jumlah = "banyak"
+	fmt.Println("jumlah dengan inference", jumlah)
+	*/
 }
