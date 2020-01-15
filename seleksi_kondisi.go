@@ -1,9 +1,9 @@
 package main
 
-import "fmt"
-
-import "math"
-
+import (
+	"fmt"
+	"math"
+)
 func main() {
 	/*go tidak mendukung ternary condition (bool var ? if var true: if var false)
 
