@@ -12,9 +12,9 @@ func main() {
 
 	//variabel tanpa tipe data (type inference) dengan operand ':='
 	var hobi string = "bermain basket"
-	lagu_fav := "jepang"
+	laguFav := "jepang"
 
-	fmt.Printf("Hobi saya %s dengan lagu favorit %s\n", hobi, lagu_fav)
+	fmt.Printf("Hobi saya %s dengan lagu favorit %s\n", hobi, laguFav)
 
 	//multi variabel
 	var satu, dua, tiga string
@@ -25,9 +25,9 @@ func main() {
 	tujuh, delapan := "7th", "8th"
 
 	//inference multi variabel dengan tipe data berbeda
-	angka_fav, makanan_fav, tinggi := 17, "ayam", 170.5
+	angkaFav, makananFav, tinggi := 17, "ayam", 170.5
 
-	fmt.Println(satu, dua, tiga, empat, lima, enam, tujuh, delapan, angka_fav, makanan_fav, tinggi)
+	fmt.Println(satu, dua, tiga, empat, lima, enam, tujuh, delapan, angkaFav, makananFav, tinggi)
 
 	//underscore, predefined sehingga tidak membutuhkan operand :=
 	_ = "Tidak bisa dilihat hasilnya"
@@ -38,13 +38,13 @@ func main() {
 	fmt.Println("Jaraknya", jarak)
 
 	//variabel pointer
-	nama_operator_pointer := new(string)
-	fmt.Println("alamat memori", nama_operator_pointer)
-	fmt.Println("hasil dereference =", *nama_operator_pointer)
+	namaOperatorPointer := new(string)
+	fmt.Println("alamat memori", namaOperatorPointer)
+	fmt.Println("hasil dereference =", *namaOperatorPointer)
 
 	/*
-	jumlah := 10
-	jumlah = "banyak"
-	fmt.Println("jumlah dengan inference", jumlah)
+		jumlah := 10
+		jumlah = "banyak"
+		fmt.Println("jumlah dengan inference", jumlah)
 	*/
 }
