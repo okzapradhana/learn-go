@@ -6,7 +6,7 @@ import (
 )
 
 type Animal struct {
-	Type   string `json: "type"`
+	Type   string `json: "Type"`
 	Place  string
 	HasLeg bool
 }
