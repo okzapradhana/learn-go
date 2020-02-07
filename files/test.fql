@@ -1,0 +1,20 @@
+LET travelio = DOCUMENT("https://www.travelio.com/search?searchType=daily&destinationCategory=City&destinationUrlName=jakarta&destination=Jakarta&checkIn=10-02-2020&checkOut=14-02-2020&bottomPrice=59764&upperPrice=6000000&destinationId=544a05f190e50d6a3d000001&hotelName=&areaId=&buildingId=&facilityId=&roomTypeId=&propTypeId=&unitType=&badge=&instant=&sortBy=&sortOrder=",{
+    driver: "cdp"
+})
+
+WAIT_ELEMENT(travelio, ".property-box", 5000)
+
+
+LET properties = ELEMENTS(travelio, ".property-box")
+
+FOR num IN 1..100
+    SCROLL(travelio, 0, 1000000000)
+    WAIT(5000)
+
+WAIT_ELEMENT(travelio, ".property-box", 20000)
+PRINT("properties", properties)
+FOR property IN properties
+    RETURN {
+        name: TRIM(INNER_TEXT(property, ".property-small-detail")),
+        price: TRIM(INNER_TEXT(property, ".price"))
+    }
